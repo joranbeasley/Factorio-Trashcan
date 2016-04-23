@@ -18,6 +18,6 @@ see also: https://wiki.factorio.com/index.php?title=Installing_Mods
 ### Video
 [![A Demo Reel](https://img.youtube.com/vi/iwzPKQEubJ8/0.jpg)](https://www.youtube.com/watch?v=iwzPKQEubJ8)
 ### screen shots
-![Mod Screen](https://github.com/joranbeasley/Factorio-Trashcan/raw/master/screenshots/crafting.png "Its here")
-![Mod states](https://github.com/joranbeasley/Factorio-Trashcan/raw/master/screenshots/the_can_.png "Its here")
+![Craft Screen](https://github.com/joranbeasley/Factorio-Trashcan/raw/master/screenshots/crafting.png "Its here")
+![The Can](https://github.com/joranbeasley/Factorio-Trashcan/raw/master/screenshots/the_can.png "Its here")
 
