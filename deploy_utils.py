@@ -8,7 +8,7 @@ def zipdir(path, ziph):
     for root, dirs, files in os.walk(path):
         for file in files:
             fpath = os.path.join(root, file)
-            print "ADD",fpath
+
             ziph.write(fpath)
 
 def find_package_folder():
