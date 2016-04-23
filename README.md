@@ -4,6 +4,8 @@
 This is an addon mod for the game Factorio ...
 
 It adds a trashcan to the game ... items inserted disapear quickly
+
+the build cost is pretty expensive... but i figure if you want this you dont care
 ### Install
 Just like any other mod
 

@@ -18,8 +18,7 @@ function check_trash()
 end
 function add_trashcan(event)
 	if event.created_entity.name == "trashcan" then
-		debug("Making trashcan!")
-		local trashcan = event.created_entity
+		 	local trashcan = event.created_entity
 			if global.trashcans == nil then global.trashcans = {} end
 			table.insert(global.trashcans, trashcan)
 	end
@@ -36,8 +35,6 @@ script.on_event(defines.events.on_tick,
 
 script.on_event(defines.events.on_built_entity,
 	function(event)
-		debug(string.format("Created Element:%s",event.created_entity.name))
-		debug(string.format("Created Element:%s",event.created_entity.type))
 
 		add_trashcan(event)
 	end

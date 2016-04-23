@@ -15,6 +15,7 @@ package_name = os.path.basename(package_directory)+"_"+tag
 tmp_dir = tempfile.mkdtemp()
 dst_dir = os.path.join(tmp_dir,package_name)
 shutil.copytree(package_directory,dst_dir)
-zipdir(dst_dir,zipfile.ZipFile(package_name+".zip","w"))
+dist_binary = package_name+".zip"
+zipdir(dst_dir,zipfile.ZipFile(dist_binary,"w"))
 shutil.rmtree(tmp_dir)
 print package_name+".zip"

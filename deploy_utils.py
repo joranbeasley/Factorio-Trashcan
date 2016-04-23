@@ -20,3 +20,4 @@ def find_package_folder():
 
 def get_version_tag():
     return os.popen("git describe --tags").read().strip().split("-")[0]
+
