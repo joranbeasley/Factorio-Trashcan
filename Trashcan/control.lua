@@ -1,18 +1,15 @@
 --
 require("utils")
 --
-function check_trash()
+local delay = 800
+
+
+function check_trash(throttle)
 	if global.trashcans ~= nil then
-		for k,rubbish_bin in pairs(global.trashcans) do
-			if k % 60 == game.tick % 125 then
-				if not rubbish_bin.valid then
-					table.remove(global.trashcans,k)
-					return
-				end
-				rubbish_bin.clear_items_inside()
-
-
-			end
+		local i = game.tick % throttle
+		while global.trashcans[i] ~= nil do
+			global.trashcans[i].clear_items_inside()
+			i = i+ throttle
 		end
 	end
 end
@@ -26,7 +23,7 @@ end
 script.on_event(defines.events.on_tick,
 --    --runs every tick ... really I would like to just call when items where added but meh..
 	function(event)
-		check_trash()
+		check_trash(delay)
 	end
 )
 
