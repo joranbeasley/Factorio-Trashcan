@@ -6,8 +6,8 @@ import zipfile
 def zipdir(path, ziph):
     # ziph is zipfile handle
     cwd = os.getcwd()
-    os.chdir(path)
-    for root, dirs, files in os.walk("."):
+    os.chdir(os.path.join(path,".."))
+    for root, dirs, files in os.walk(os.path.split(path)[-1]):
         for file in files:
             fpath = os.path.join(root, file)
             ziph.write(fpath)
