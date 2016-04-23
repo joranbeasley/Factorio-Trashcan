@@ -1,7 +1,6 @@
-script: "echo nothing to do"
-before_deploy:
+script:
   - export BINARY=$(python update_version.py)
-  - echo OK $BINARY
+  - python -c "import zipfile,os;print(zipfile.ZipFile(os.environ['BINARY']).namelist())"
 
 deploy:
   provider: releases
