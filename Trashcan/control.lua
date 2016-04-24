@@ -8,7 +8,12 @@ function check_trash(throttle)
 	if global.trashcans ~= nil then
 		local i = game.tick % throttle
 		while global.trashcans[i] ~= nil do
-			global.trashcans[i].clear_items_inside()
+			if global.trashcans[i].valid then
+				global.trashcans[i].clear_items_inside()
+			else
+				table.remove(global.trashcans,k)
+				return check_trash(throttle)
+			end
 			i = i+ throttle
 		end
 	end
