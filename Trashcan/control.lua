@@ -10,9 +10,6 @@ function check_trash(throttle)
 		while global.trashcans[i] ~= nil do
 			if global.trashcans[i].valid then
 				global.trashcans[i].clear_items_inside()
-			else
-				table.remove(global.trashcans,k)
-				return check_trash(throttle)
 			end
 			i = i+ throttle
 		end

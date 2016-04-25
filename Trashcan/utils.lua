@@ -86,7 +86,7 @@ end
 
 function arrayLength(T)
    local count = 0
-   for k,v in pairs(tbl) do count = count + 1 end
+   for k,v in pairs(T) do count = count + 1 end
    return count
 end
 function explode(div,str)
